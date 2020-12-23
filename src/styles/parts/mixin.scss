@@ -1,0 +1,52 @@
+@mixin row {
+  margin-left: sx(-15);
+  margin-right: sx(-15);
+  @include _768 {
+    margin-left: slx(-15);
+    margin-right: slx(-15);
+  }
+  @include _1920 {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+@mixin col {
+  padding-left: sx(15);
+  padding-right: sx(15);
+  @include _768 {
+    padding-left: slx(15);
+    padding-right: slx(15);
+  }
+  @include _1920 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@mixin icon {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+@function sx($target, $context: 375) {
+  @return ($target / $context) * 100vw;
+}
+
+@function slx($target, $context: 1920) {
+  @return ($target / $context) * 100vw;
+}
+
+@mixin _768 {
+  @media (min-width: 768px){
+    @content;
+  }
+}
+
+@mixin _1920 {
+  @media (min-width: 1920px){
+    @content;
+  }
+}

@@ -1,0 +1,60 @@
+.navbar {
+  background: $white;
+  position: relative;
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  &__menu {
+    margin-left: auto;
+    @include _768 {
+      margin-right: auto;
+      width: 100%;
+    }
+    &-close {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 33;
+      opacity: 0;
+      background-color: #000;
+      display: none;
+      &.show {
+        opacity: 0.2;
+        display: block;
+        @include _768{
+          display: none;
+        }
+      }
+    }
+    &-btn {
+      color: $black;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      cursor: pointer;
+      outline: none;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 15px;
+      height: 40px;
+      position: relative;
+      z-index: 44;
+      transition: all 0.2s linear;
+      &:hover {
+        color: $white;
+        background-color: #000;
+      }
+      @include _768 {
+        display: none;
+      }
+    }
+
+  }
+}

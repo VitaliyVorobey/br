@@ -1,0 +1,12 @@
+@import "parts/var";
+@import "parts/mixin";
+@import "parts/normalize";
+@import "parts/basic";
+@import 'parts/nav';
+@import "parts/menu";
+@import 'parts/custom';
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
